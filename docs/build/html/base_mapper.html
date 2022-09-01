@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>General Philosophy &amp; The Base Mapper &mdash; xCell  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="2MPZ" href="mappers.html" />
+    <link rel="prev" title="Welcome to xCell’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> xCell
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">General Philosophy &amp; The Base Mapper</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#design-philosophy">Design Philosophy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-xcell.mappers.mapper_base">The Base Mapper</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mappers.html">2MPZ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mappers.html#module-xcell.mappers.mapper_ACT_base">ACT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mappers.html#module-xcell.mappers.mapper_CatWISE">CatWISE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mappers.html#module-xcell.mappers.mapper_DELS">DESL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mappers.html#desy1">DESY1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mappers.html#module-xcell.mappers.mapper_HSC_DR1wl">HSC_DR1wl</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mappers.html#module-xcell.mappers.mapper_KiDS1000">KiDS-1000</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mappers.html#module-xcell.mappers.mapper_NVSS">NVSS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mappers.html#module-xcell.mappers.mapper_Planck_base">Planck</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mappers.html#module-xcell.mappers.mapper_P18CMBK">P18CMBk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mappers.html#module-xcell.mappers.mapper_SDSS">SDSS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mappers.html#module-xcell.mappers.mapper_ROSAT">ROSAT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mappers.html#module-xcell.mappers.mapper_WIxSC">WIxSC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">Utils</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">xCell</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>General Philosophy &amp; The Base Mapper</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/base_mapper.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="general-philosophy-the-base-mapper">
+<h1>General Philosophy &amp; The Base Mapper<a class="headerlink" href="#general-philosophy-the-base-mapper" title="Permalink to this heading"></a></h1>
+<section id="design-philosophy">
+<h2>Design Philosophy<a class="headerlink" href="#design-philosophy" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Describe COSMOTECA.</p></li>
+<li><p>How all mappers flow the base mapper.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="module-xcell.mappers.mapper_base">
+<span id="the-base-mapper"></span><h2>The Base Mapper<a class="headerlink" href="#module-xcell.mappers.mapper_base" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="xcell.mappers.mapper_base.MapperBase">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">xcell.mappers.mapper_base.</span></span><span class="sig-name descname"><span class="pre">MapperBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/xcell/mappers/mapper_base.html#MapperBase"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xcell.mappers.mapper_base.MapperBase" title="Permalink to this definition"></a></dt>
+<dd><p>Base mapper class used as foundation     for the rest of mappers.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="xcell.mappers.mapper_base.MapperBase.get_beam">
+<span class="sig-name descname"><span class="pre">get_beam</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/xcell/mappers/mapper_base.html#MapperBase.get_beam"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xcell.mappers.mapper_base.MapperBase.get_beam" title="Permalink to this definition"></a></dt>
+<dd><p>Calculates the value of the mapper’s beam at each             multipole. The beam is calculated following the             information contained in “self.beam_info”.             Currently three types of beam are implemented:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Gaussian: a Gaussian beam defined by a FWHM                    in arcmin.</p></li>
+<li><p>PixWin: the pixel window function associated                    resolution down/up-scalings.</p></li>
+<li><p>Custom: loads beam from file.</p></li>
+</ul>
+</div></blockquote>
+<p>“self.beam_info” can contain information for many beams.             If this is the case, the final beam is the product of             individual beams.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>value of the beam at each multipole.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>beam (Array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="xcell.mappers.mapper_base.MapperBase.get_contaminants">
+<span class="sig-name descname"><span class="pre">get_contaminants</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/xcell/mappers/mapper_base.html#MapperBase.get_contaminants"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xcell.mappers.mapper_base.MapperBase.get_contaminants" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the contaminants maps of the mapper.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>contaminant mapper.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>contaminants (Array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="xcell.mappers.mapper_base.MapperBase.get_dtype">
+<span class="sig-name descname"><span class="pre">get_dtype</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/xcell/mappers/mapper_base.html#MapperBase.get_dtype"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xcell.mappers.mapper_base.MapperBase.get_dtype" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the type of the mapper</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>mapper_type (String)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="xcell.mappers.mapper_base.MapperBase.get_ell">
+<span class="sig-name descname"><span class="pre">get_ell</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/xcell/mappers/mapper_base.html#MapperBase.get_ell"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xcell.mappers.mapper_base.MapperBase.get_ell" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the array of multipoles associted with the         mapper’s pixel resolution.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>multipoles array.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>ells (Array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="xcell.mappers.mapper_base.MapperBase.get_mask">
+<span class="sig-name descname"><span class="pre">get_mask</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/xcell/mappers/mapper_base.html#MapperBase.get_mask"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xcell.mappers.mapper_base.MapperBase.get_mask" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the mask of the mapper.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>mapper’s mask</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>mask (Array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="xcell.mappers.mapper_base.MapperBase.get_nl_coupled">
+<span class="sig-name descname"><span class="pre">get_nl_coupled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/xcell/mappers/mapper_base.html#MapperBase.get_nl_coupled"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xcell.mappers.mapper_base.MapperBase.get_nl_coupled" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the coupled noise power spectrum of the mapper.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>coupled noise power spectrum</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>nl_coupled (Array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="xcell.mappers.mapper_base.MapperBase.get_nmt_field">
+<span class="sig-name descname"><span class="pre">get_nmt_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/xcell/mappers/mapper_base.html#MapperBase.get_nmt_field"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xcell.mappers.mapper_base.MapperBase.get_nmt_field" title="Permalink to this definition"></a></dt>
+<dd><p>Returns an instance of Namaster field given a mapper’s         signal map, mask and beam.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a Namaster             field instance.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>nmt_field (<code class="xref py py-class docutils literal notranslate"><span class="pre">NaMaster.NmtField</span></code>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="xcell.mappers.mapper_base.MapperBase.get_signal_map">
+<span class="sig-name descname"><span class="pre">get_signal_map</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/xcell/mappers/mapper_base.html#MapperBase.get_signal_map"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xcell.mappers.mapper_base.MapperBase.get_signal_map" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the signal map of the mapper.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>signal mapper.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>delta_map (Array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="xcell.mappers.mapper_base.MapperBase.get_spin">
+<span class="sig-name descname"><span class="pre">get_spin</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/xcell/mappers/mapper_base.html#MapperBase.get_spin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xcell.mappers.mapper_base.MapperBase.get_spin" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the spin of the mapper.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>spin (Int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to xCell’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mappers.html" class="btn btn-neutral float-right" title="2MPZ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jaime.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

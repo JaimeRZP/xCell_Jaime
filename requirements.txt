@@ -1,0 +1,13 @@
+numpy
+scipy
+scikit-learn
+flake8
+astropy
+healpy
+pandas
+git+https://github.com/LSSTDESC/NaMaster
+pyccl
+camb
+sacc
+fitsio
+pixell
