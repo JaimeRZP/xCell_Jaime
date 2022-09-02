@@ -36,21 +36,9 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../base_mapper.html">General Philosophy &amp; The Base Mapper</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../mappers.html">2MPZ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../mappers.html#module-xcell.mappers.mapper_ACT_base">ACT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../mappers.html#module-xcell.mappers.mapper_CatWISE">CatWISE</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../mappers.html#module-xcell.mappers.mapper_DELS">DESL</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../mappers.html#desy1">DESY1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../mappers.html#module-xcell.mappers.mapper_HSC_DR1wl">HSC_DR1wl</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../mappers.html#module-xcell.mappers.mapper_KiDS1000">KiDS-1000</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../mappers.html#module-xcell.mappers.mapper_NVSS">NVSS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../mappers.html#module-xcell.mappers.mapper_Planck_base">Planck</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../mappers.html#module-xcell.mappers.mapper_P18CMBK">P18CMBk</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../mappers.html#module-xcell.mappers.mapper_SDSS">SDSS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../mappers.html#module-xcell.mappers.mapper_ROSAT">ROSAT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../mappers.html#module-xcell.mappers.mapper_WIxSC">WIxSC</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../utils.html">Utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../design.html">Design Philosophy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../science.html">Scientific Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api.html">API</a></li>
 </ul>
 
         </div>
@@ -97,7 +85,7 @@
     <span class="k">return</span> <span class="n">fname_full</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">fname_full</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="get_rerun_data"><a class="viewcode-back" href="../../../utils.html#xcell.mappers.utils.get_rerun_data">[docs]</a><span class="k">def</span> <span class="nf">get_rerun_data</span><span class="p">(</span><span class="n">mpr</span><span class="p">,</span> <span class="n">fname</span><span class="p">,</span> <span class="n">ftype</span><span class="p">,</span> <span class="n">section</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">read</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<div class="viewcode-block" id="get_rerun_data"><a class="viewcode-back" href="../../../mappers.html#xcell.mappers.utils.get_rerun_data">[docs]</a><span class="k">def</span> <span class="nf">get_rerun_data</span><span class="p">(</span><span class="n">mpr</span><span class="p">,</span> <span class="n">fname</span><span class="p">,</span> <span class="n">ftype</span><span class="p">,</span> <span class="n">section</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">read</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Loads files from previous runs of a given mapper</span>
 <span class="sd">    Args:</span>
 <span class="sd">        mpr (:class:`~xcell.mapper_base.MapperBase`): A mapper object.</span>
@@ -143,7 +131,7 @@
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unknown file format </span><span class="si">{</span><span class="n">ftype</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="save_rerun_data"><a class="viewcode-back" href="../../../utils.html#xcell.mappers.utils.save_rerun_data">[docs]</a><span class="k">def</span> <span class="nf">save_rerun_data</span><span class="p">(</span><span class="n">mpr</span><span class="p">,</span> <span class="n">fname</span><span class="p">,</span> <span class="n">ftype</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<div class="viewcode-block" id="save_rerun_data"><a class="viewcode-back" href="../../../mappers.html#xcell.mappers.utils.save_rerun_data">[docs]</a><span class="k">def</span> <span class="nf">save_rerun_data</span><span class="p">(</span><span class="n">mpr</span><span class="p">,</span> <span class="n">fname</span><span class="p">,</span> <span class="n">ftype</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Saves files from previous runs of a given mapper</span>
 <span class="sd">    Args:</span>
 <span class="sd">        mpr (:class:`~xcell.mapper_base.MapperBase`): A mapper object.</span>
@@ -170,7 +158,7 @@
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unknown file format </span><span class="si">{</span><span class="n">ftype</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="rotate_mask"><a class="viewcode-back" href="../../../utils.html#xcell.mappers.utils.rotate_mask">[docs]</a><span class="k">def</span> <span class="nf">rotate_mask</span><span class="p">(</span><span class="n">mask</span><span class="p">,</span> <span class="n">rot</span><span class="p">,</span> <span class="n">binarize</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="viewcode-block" id="rotate_mask"><a class="viewcode-back" href="../../../mappers.html#xcell.mappers.utils.rotate_mask">[docs]</a><span class="k">def</span> <span class="nf">rotate_mask</span><span class="p">(</span><span class="n">mask</span><span class="p">,</span> <span class="n">rot</span><span class="p">,</span> <span class="n">binarize</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Applies a given rotator object to mask</span>
 <span class="sd">    Args:</span>
 <span class="sd">        mask (Array): mask to be rotated.</span>
@@ -195,7 +183,7 @@
     <span class="k">return</span> <span class="n">m</span></div>
 
 
-<div class="viewcode-block" id="rotate_map"><a class="viewcode-back" href="../../../utils.html#xcell.mappers.utils.rotate_map">[docs]</a><span class="k">def</span> <span class="nf">rotate_map</span><span class="p">(</span><span class="n">mapp</span><span class="p">,</span> <span class="n">rot</span><span class="p">):</span>
+<div class="viewcode-block" id="rotate_map"><a class="viewcode-back" href="../../../mappers.html#xcell.mappers.utils.rotate_map">[docs]</a><span class="k">def</span> <span class="nf">rotate_map</span><span class="p">(</span><span class="n">mapp</span><span class="p">,</span> <span class="n">rot</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Applies a given rotator object to map. \</span>
 <span class="sd">    The rotation is performed in Fourrier</span>
@@ -215,7 +203,7 @@
     <span class="k">return</span> <span class="n">rot</span><span class="o">.</span><span class="n">rotate_map_alms</span><span class="p">(</span><span class="n">mapp</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="get_map_from_points"><a class="viewcode-back" href="../../../utils.html#xcell.mappers.utils.get_map_from_points">[docs]</a><span class="k">def</span> <span class="nf">get_map_from_points</span><span class="p">(</span><span class="n">cat</span><span class="p">,</span> <span class="n">nside</span><span class="p">,</span> <span class="n">w</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rot</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<div class="viewcode-block" id="get_map_from_points"><a class="viewcode-back" href="../../../mappers.html#xcell.mappers.utils.get_map_from_points">[docs]</a><span class="k">def</span> <span class="nf">get_map_from_points</span><span class="p">(</span><span class="n">cat</span><span class="p">,</span> <span class="n">nside</span><span class="p">,</span> <span class="n">w</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rot</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                         <span class="n">ra_name</span><span class="o">=</span><span class="s1">&#39;RA&#39;</span><span class="p">,</span> <span class="n">dec_name</span><span class="o">=</span><span class="s1">&#39;DEC&#39;</span><span class="p">,</span>
                         <span class="n">in_radians</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">qu</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
@@ -271,7 +259,7 @@
     <span class="k">return</span> <span class="n">numcount</span></div>
 
 
-<div class="viewcode-block" id="get_DIR_Nz"><a class="viewcode-back" href="../../../utils.html#xcell.mappers.utils.get_DIR_Nz">[docs]</a><span class="k">def</span> <span class="nf">get_DIR_Nz</span><span class="p">(</span><span class="n">cat_spec</span><span class="p">,</span> <span class="n">cat_photo</span><span class="p">,</span> <span class="n">bands</span><span class="p">,</span> <span class="n">zflag</span><span class="p">,</span>
+<div class="viewcode-block" id="get_DIR_Nz"><a class="viewcode-back" href="../../../mappers.html#xcell.mappers.utils.get_DIR_Nz">[docs]</a><span class="k">def</span> <span class="nf">get_DIR_Nz</span><span class="p">(</span><span class="n">cat_spec</span><span class="p">,</span> <span class="n">cat_photo</span><span class="p">,</span> <span class="n">bands</span><span class="p">,</span> <span class="n">zflag</span><span class="p">,</span>
                <span class="n">zrange</span><span class="p">,</span> <span class="n">nz</span><span class="p">,</span> <span class="n">nearest_neighbors</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">njk</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
                <span class="n">bands_photo</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>

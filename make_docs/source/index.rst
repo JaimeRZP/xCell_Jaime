@@ -7,11 +7,12 @@ Welcome to xCell's documentation!
 =================================
 
 .. toctree::
-   :maxdepth: 2
-
-   base_mapper
-   mappers
-   utils
+   :maxdepth: 5
+   
+   design
+   science
+   api
+   
 
 
 Indices and tables
